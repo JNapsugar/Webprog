@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rulettasztal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container-first">
+        <div class="number zero-item  spot" id="number0">
+			<div class="value" >0</div>
+		</div>     
+    </div>
+    <div class="container-second">
+		<div class="doz-item spot" id="doz1">
+			<div>1st 12</div>
+		</div>
+		<div class="doz-item spot" id="doz2">
+			<div>2nd 12</div>
+		</div>
+		<div class="doz-item spot" id="doz3">
+			<div>3rd 12</div>
+		</div>
+    </div>
+    <div class="container-third">
+		<div class="range outside-section spot" id="kicsi">
+			<div>1-18</div>
+		</div>
+		<div class="even-odd outside-section spot" id="even">
+			<div>EVEN</div>
+		</div>
+		<div class="color outside-section spot" id="red">
+			<div><div class="rhomb-red"></div></div>
+		</div>
+		<div class="color outside-section spot" id="black">
+			<div><div class="rhomb-black"></div></div>
+		</div>
+		<div class="even-odd outside-section spot" id="odd">
+			<div>ODD</div>
+		</div>
+		<div class="range outside-section spot" id="nagy">
+			<div>19-36</div>
+		</div>
+	</div>
+	<div id="sorsolas_container">
+		<img src="rulette.png" id="sorsolas_img">
+		<p id="sorsolas_text">Sorsolás</p>
+		<p id="sorsoltszam">-</p>
+		<p>Nyeremény: <span id="nyeremeny">0</span>Ft</p>
+	</div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

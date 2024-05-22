@@ -1,0 +1,59 @@
+body{
+    background-image: url(hatter.jpg);
+    background-size: cover;
+    user-select: none;
+    -webkit-user-select: none;
+    overflow: hidden;
+}
+
+img{
+    -webkit-user-drag: none;
+}
+
+#pontokP{
+    color: white;
+    font-size: x-large;
+    margin-left: 4.5%;
+    margin-top: 7%;
+    z-index: 99;
+    position: relative;
+}
+
+h1{
+    text-align: center;
+    font-size: 500%;
+    margin-top: 17%;
+    font-family:cursive;
+    z-index: 99;
+    position: relative;
+    animation-name: animacio;
+    animation-duration:1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+}
+
+@keyframes animacio {
+    0%   {color:rgb(231, 155, 231); margin-top: 15%; }
+    50%  {color:rgb(146, 214, 126); margin-top: 16%; }
+    100% {color:rgb(231, 155, 231); margin-top: 15%; }
+  }
+
+
+button{
+    background-color: rgba(233, 174, 245);
+    font-size: 2rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    display: block;
+    margin: auto;
+    font-family: cursive;
+    transition: 0.5s;
+    z-index: 99;
+    position: relative;
+    &:hover{
+        background-color: rgba(247, 250, 226, 0.8);  
+        border: 0.2rem black dotted;
+    }
+}

@@ -1,0 +1,111 @@
+html, body{
+    font-family:'Calibri';
+    margin: 0;
+}
+
+.navBar{
+    background-color: rgb(34, 34, 34);
+    color: white;
+    height: 5rem;
+    width: 100%;
+    line-height: 5rem;
+}
+
+.navItem{
+    width: 4rem;
+    float: left;
+    cursor: pointer;
+    margin: 0 0.5rem;
+}
+
+h1{
+    text-align: center;
+}
+
+#content{
+    display: block;
+    margin: auto;
+}
+
+#konyvek{
+    width: 70%;
+}
+
+.card{
+    width: 20rem;
+    border: 1px lightgray solid;
+    border-radius: 0.5rem;
+    text-align: center;
+    line-height: 1rem;
+
+    .nev{
+        color: gray;
+        font-size: large;
+    }
+    
+    .img{
+        width: 70%;
+    }
+    
+    .ikonok{
+        color:rgb(59, 89, 255);
+        font-size: large;
+        
+        i{
+            margin: 0.5rem;
+            cursor: pointer;
+        }
+    }
+
+}
+
+.megtekintes, .ujKonyv{
+    width: 85%;
+    display: block;
+    margin: 2rem auto;
+    line-height: 1rem;
+    text-align: center;
+    border: 1px lightgray solid;
+    border-radius: 0.5rem;
+    min-height: 80vh;
+
+    h1{
+        margin: 2rem;
+    }
+
+    img{
+        width: 30%;
+    }
+
+    i{
+        left: 2rem;
+        position: absolute;
+        font-size: 3rem;
+        cursor: pointer;
+    }
+
+    table{
+        margin: auto;
+        line-height: 2.5rem;
+        text-align: left;
+    }
+
+    input{
+        height: 1.5rem;
+        margin: 0.5rem 1rem;
+        width: 30rem;
+    }
+
+    #Felvitel{
+        background-color: white;
+        border: 2px gray solid;
+        width: 10rem;
+        height: 2rem;
+        border-radius: 0.7rem;
+        margin: 1rem;
+        cursor: pointer;
+        &:hover{
+            background-color: lightgray;
+        }
+    }
+}

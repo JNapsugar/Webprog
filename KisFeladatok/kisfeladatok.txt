@@ -1,0 +1,29 @@
+/* 1)
+* Kérj be 2 számot a felhasználótól és mentsd el őket egy-egy változóba.
+* Készíts egy új változót "hatvany" néven. Az első számot emeld a második szám hatványára, és mentsd el a hatvany változóba.
+* Logold ki az osszeg változó értékét.
+*/
+
+
+/* 2)
+* Fűzd hozzá a " felhasználó!" stringet az uzenet változóban eltárolt értékhez és írd ki a felhasználónak!
+*/
+
+let uzenet = "Szia";
+
+/* 3)
+* Generálj véletlen számot 1-10 között a "szam" változóba.
+* Conditional (3 operandusú) operátor segítségével írd ki a felhasználónak, hogy nagyobb-e vagy nem nagyobb, mint 5.
+*/
+
+
+/* 4)
+ * Hozz létre egy 5 elemű tömböt. Logold ki a 3. elemét.
+ */
+
+ /* 5)
+ * Kérj be egy számot a felhasználótól és írd ki neki az abszolút értékét. Használj beépített függvényt!
+ */
+
+
+

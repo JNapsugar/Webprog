@@ -1,0 +1,41 @@
+
+body{
+    background-color: rgb(206, 161, 116);
+}
+.card{
+    margin: 1rem;
+    background-color: bisque;
+    float: left;
+    height: 22rem;
+    width: 20rem;
+    text-align: center;
+    border: 0.2rem solid brown;
+    & button {
+        background-color: lightblue !important;
+        border-radius: 0.5rem !important;
+        display: block;
+        margin: auto;
+        margin-top: 0.2rem;
+    }
+    & img{
+        width: 10rem !important;
+        height: 10rem !important;
+        display: block;
+        margin: auto;
+    }
+}
+
+.felvetel{
+    background-color: rgb(252, 220, 178);
+    padding: 0.5rem;
+    border: 0.2rem solid brown;
+    & button {
+        background-color: burlywood;
+        border-radius: 0.5rem;
+        width: 10rem;
+        height: 3rem;
+    }
+    & input{
+        margin: 0.2rem;
+    }
+}

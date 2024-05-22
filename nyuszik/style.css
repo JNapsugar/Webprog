@@ -1,0 +1,11 @@
+body{
+    background-color: rgb(119, 138, 87);
+    user-select: none;
+    -webkit-user-select: none;
+    overflow: hidden;
+    background-image: url(mezo.jpg);
+}
+
+img{
+    -webkit-user-drag: none;
+}

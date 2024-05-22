@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>♥</title>
+    <style>
+        body{
+            background-color: rgb(169, 189, 243);
+            font-style: italic;
+        }
+        .szoveg{
+            border:dashed 3px lightgrey;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            padding: 1rem;
+        }
+        .cuccok{
+            border:dashed 3px lightgoldenrodyellow;
+            padding: 1rem;
+        }
+        button{
+            background-color: bisque;
+            padding: 0.3rem;
+            border-radius: 0.3rem;
+            box-shadow: 2px 1px 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="szoveg">
+        <h3>1.</h3>
+        <p>* Kérj be 2 számot a felhasználótól és mentsd el őket egy-egy változóba.</p>
+        <p>* Készíts egy új változót "hatvany" néven. Az első számot emeld a második szám hatványára, és mentsd el a hatvany változóba.</p>
+        <p>* Logold ki az osszeg változó értékét.</p>
+    </div>
+    <div class="cuccok">
+    <p>
+    <label>Adjon meg egy számot</label>
+    <input type="number" name="a" id="a">
+    </p>
+    <p>
+        <label>Adjon meg hanyadik hatványon</label>
+        <input type="number" name="b" id="b">
+    </p>
+    <p><button id="elso">Hatványozás</button></p>
+    <p>Eredmény: <span id="eredmeny"></span></p>
+    </div>
+
+
+    <div class="szoveg">
+        <h3>2.</h3>
+        <p>* Fűzd hozzá a " felhasználó!" stringet az uzenet változóban eltárolt értékhez és írd ki a felhasználónak!</p>
+    </div>
+    <div class="cuccok">
+    <p><button id="masodik">Szia számító!</button></p>
+    <p><span id="szia"></span></p>
+    </div>
+
+    <div class="szoveg">
+        <h3>3.</h3>
+        <p>* Generálj véletlen számot 1-10 között a "szam" változóba.</p>
+        <p>* Conditional (3 operandusú) operátor segítségével írd ki a felhasználónak, hogy nagyobb-e vagy nem nagyobb, mint 5.</p>
+    </div>
+    <div class="cuccok">
+    <p><button id="harmadik">Szám generálása</button></p>
+    <p>A szám:<span id="randomszam"></span></p>
+    <p id="nagyobb"></p>
+    </div>
+
+    <div class="szoveg">
+        <h3>4.</h3>
+        <p> * Hozz létre egy 5 elemű tömböt. Logold ki a 3. elemét.</p>
+    </div>
+    <div class="cuccok">
+    <p><button id="negyedik">Tömb csináló</button></p>
+    <p>A tömb:<span id="tomb"></span></p>
+    <p>A harmadik eleme: <span id="harmadikelem"></span></p>
+    </div>
+
+    <div class="szoveg">
+        <h3>5.</h3>
+        <p>* Kérj be egy számot a felhasználótól és írd ki neki az abszolút értékét. Használj beépített függvényt!</p>
+    </div>
+    <div class="cuccok">
+    <label>Adjon meg egy számot:</label>
+    <input type="number" name="szam" id="szam">
+    <p><button id="otodik">Abszolút érték</button></p>
+    <p>Az abszolút értéke: <span id="abszolut"></span></p>
+    </div>
+    <script src="01.31.js"></script>
+</body>
+</html>

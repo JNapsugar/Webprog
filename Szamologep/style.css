@@ -1,0 +1,37 @@
+body{
+    background-color: rgb(231, 217, 243);
+}
+#szamologep{
+    background-color: cornflowerblue;
+    border: 2px darkblue solid;
+    height: 22rem;
+    width: 14.5rem;
+    padding: 0.5rem;
+    display: block;
+    margin: auto;
+    margin-top: 12rem;
+    border-radius: 1.5rem;
+}
+
+.gomb{
+    background-color: lightblue;
+    border-radius: 1rem;
+    border: 1px darkblue solid;
+    height: 3rem;
+    width: 3rem;
+    float: left;
+    margin: 0.2rem;
+    text-align: center;
+}
+#kijelzo{
+    background-color: rgb(169, 218, 169);
+    border: 2px solid darkgreen;
+    border-radius: 0.5rem;
+    height: 3rem;
+    width: 85%;
+    display: block;
+    margin: auto;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    padding: 0.2rem;
+}
