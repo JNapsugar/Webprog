@@ -2,12 +2,12 @@
 let konyvek = []
 KonyvekGet()
 
-document.getElementById("Konyvek").onclick = KonyvekGet
-document.getElementById("UjKonyv").onclick = UjKonyv
+document.getElementById("Konyvek").onclick = KonyvekGet()
+document.getElementById("UjKonyv").onclick = UjModositasKonyv("POST",0)
 
 function KonyvekGet() {
-    document.getElementById('content').innerHTML = ` <h1>Könyvek</h1><div id="konyvek"></div>`
-    fetch("https://localhost:5000/")
+    document.getElementById('content').innerHTML = `<h1>Könyvek</h1><div id="konyvek"></div>`
+    fetch("https://localhost:7017/")
     .then(
         function(data) {
             return data.json()
@@ -24,7 +24,7 @@ function KonyvekGet() {
                     <h2>Kiadás éve: ${data[i].kiadasEve}</h2>
                     <p>Könyv értékelése: ${data[i].ertekeles}</p>
                     <img src="${data[i].kepneve}" onclick="Megtekintes(${i})">
-                    <p class="ikonok"><i class="bi bi-pencil" id="modositas" onclick="Modositas(${i})"></i><i class="bi bi-trash3" id="torles"></i></p>
+                    <p class="ikonok"><i class="bi bi-pencil" id="modositas" onclick="UjModositasKonyv("PUT",${i})"></i><i class="bi bi-trash3" id="torles" onclick="Torles(${i})"></i></p>
                 </div>
                 `   
             }
@@ -41,15 +41,15 @@ function Megtekintes(i) {
             <p>Könyv értékelése: ${konyvek[i].ertekeles}</p>
             <img src="${konyvek[i].kepneve}">
         </div>`
-    document.getElementById("vissza") = KonyvekGet
+    document.getElementById("vissza") = KonyvekGet()
 }
 
-function UjKonyv() {
+function UjModositasKonyv(method, id) {
     document.getElementById("content").innerHTML = `        
     <div class="ujKonyv">
         <table>
         <p><i class="bi bi-arrow-left-circle" id="vissza"></i></p>
-        <h1>Új könyv felvétele</h1>
+        <h1 id ="cim">${method == "POST" ? "Új könyv felvitele" : "Könyv módosítása"}</h1>
         <table>
             <tr>
                 <td><label>Könyv neve:</label></td>
@@ -68,26 +68,36 @@ function UjKonyv() {
                 <td><input type="text" id="ujKepnev"></td>
             </tr>
         </table>
-        <button id="Felvitel">Felvitel</button>
+        ${method == "POST" ? 
+            `<button id='Felvitel' onclick='Felvitel(method, 'https://localhost:7017/')'></button>` :
+            `<button id='Felvitel' onclick='Felvitel(method, 'https://localhost:7017/'+${id})'></button>`
+        }
     </div>`
-    document.getElementById("vissza") = KonyvekGet
-    document.getElementById("Felvitel") = Felvitel
-}
+    document.getElementById("vissza").onclick = KonyvekGet()
 
-function Felvitel() {
-    let body={
-        nev: document.getElementById("ujNev").value,
-        kiadasEve: document.getElementById("ujKiadas").value,
-        ertekeles: Number(document.getElementById("ujErtekeles").value),
-        kepneve: document.getElementById("ujKepnev").value,
+    function Felvitel(method, url) {
+        let body={
+            nev: document.getElementById("ujNev").value,
+            kiadasEve: document.getElementById("ujKiadas").value,
+            ertekeles: Number(document.getElementById("ujErtekeles").value),
+            kepneve: document.getElementById("ujKepnev").value,
+        }
+    
+        fetch(url,{
+            method : method,
+            body : JSON.stringify(body),
+            headers: {
+                'Content-Type': 'application/json'}})
+    
+        alert("(Adatok tárolása sikeres!)")
     }
 
-    fetch(url,{
-        method : "POST",
-        body : JSON.stringify(body),
-        headers: {
-            'Content-Type': 'application/json'}})
-
-    alert("(Adatok tárolása sikeres!)")
 }
 
+
+
+function Torles(id) {
+    fetch("https://localhost:7017/"+id,{method : "DELETE"})
+    alert("Adatok törlése sikeres!")
+    KonyvekGet
+}
