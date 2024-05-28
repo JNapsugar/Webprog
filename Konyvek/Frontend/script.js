@@ -26,7 +26,7 @@ function KonyvekGet() {
                     <p>Könyv értékelése: ${data[i].ertekeles}</p>
                     <img src="${data[i].kepneve}" onclick="Megtekintes(${i})">
                     <p class="ikonok">
-                        <i class="bi bi-pencil" id="modositas" onclick='UjModositasKonyv("PUT",${data[i].id-1})'></i>
+                        <i class="bi bi-pencil" id="modositas" onclick='UjModositasKonyv("PUT",${i})'></i>
                         <i class="bi bi-trash3" id="torles" onclick="Torles(${data[i].id})"></i>
                     </p>
                 </div>
@@ -111,7 +111,10 @@ function Felvitel(method, url) {
 
 
 function Torles(id) {
-    fetch(`http://localhost:5000/Konyv/${id}`,{method : "DELETE"})
-    alert("Adatok törlése sikeres!")
-    KonyvekGet()
+    if (confirm("Biztos törölni szeretné?")) {
+        fetch(`http://localhost:5000/Konyv/${id}`,{method : "DELETE"})
+        alert("Adatok törlése sikeres!")
+        KonyvekGet()
+    }
+
 }
