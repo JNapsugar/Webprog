@@ -24,7 +24,10 @@ function KonyvekGet() {
                     <h2>Kiadás éve: ${data[i].kiadasEve}</h2>
                     <p>Könyv értékelése: ${data[i].ertekeles}</p>
                     <img src="${data[i].kepneve}" onclick="Megtekintes(${i})">
-                    <p class="ikonok"><i class="bi bi-pencil" id="modositas" onclick="UjModositasKonyv("PUT",${i})"></i><i class="bi bi-trash3" id="torles" onclick="Torles(${i})"></i></p>
+                    <p class="ikonok">
+                        <i class="bi bi-pencil" id="modositas" onclick="UjModositasKonyv("PUT",${i})"></i>
+                        <i class="bi bi-trash3" id="torles" onclick="Torles(${i})"></i>
+                    </p>
                 </div>
                 `   
             }
