@@ -16,6 +16,14 @@ html, body{
     float: left;
     cursor: pointer;
     margin: 0 0.5rem;
+    i{
+        font-size: 3rem;
+        color: darkgray;
+        cursor:default;
+    }
+    &:hover{
+        color: darkgray;
+    }
 }
 
 h1{
@@ -40,6 +48,7 @@ h1{
     line-height: 1rem;
     float: left;
     margin: 1rem;
+    box-shadow: gray 2px 2px 8px;
 
     .nev{
         color: gray;
@@ -48,6 +57,7 @@ h1{
     
     img{
         width: 70%;
+        cursor: pointer;
     }
     
     .ikonok{
