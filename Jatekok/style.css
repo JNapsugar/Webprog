@@ -12,6 +12,10 @@ body,html{
     line-height: 2rem;
     padding-left: 1rem;
     font-size: 1.2rem;
+    a{
+        text-decoration: none;
+        color: aliceblue;
+    }
 }
 
 .navItem{
@@ -43,12 +47,22 @@ body,html{
     p{
         font-size: 1.5rem;
         letter-spacing: 0.5rem;
+        color: black;
+    }
+
+    a{
+        text-decoration: none;
     }
 }
 .StartGomb:hover{
     background-color: rgb(133, 166, 228);
     scale: 110%;
     cursor: pointer;
+}
+#PokemonBtn{
+    width: 32rem;
+    height: 20rem;
+    margin-top: 1rem;
 }
 
 #jatektabla{

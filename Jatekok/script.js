@@ -1,3 +1,18 @@
+document.getElementById("FooldalNav").onclick = function () {
+    document.getElementById("content").innerHTML = `
+    <div id="szabalyok"></div>
+        <div id="jatektabla">
+            <div id="SudokuBtn" class="StartGomb"><p>Sudoku</p><img src="Sudoku.png"></div>
+            <div id="AmobaBtn" class="StartGomb"><p>Amőba</p><img src="Amoba.png"></div>
+            <a href="../Pokemon/Pokemon/index.html"><div id="PokemonBtn" class="StartGomb"><p>Pokemon TCG</p><img src="Pokemon.png"></div></a>
+        </div>
+        <div id="gombok"></div>`
+        document.getElementById("SudokuNav").onclick = Sudoku
+        document.getElementById("SudokuBtn").onclick = Sudoku
+        document.getElementById("AmobaNav").onclick = Amoba
+        document.getElementById("AmobaBtn").onclick = Amoba
+} 
+
 //#region Sudoku
 document.getElementById("SudokuNav").onclick = Sudoku
 document.getElementById("SudokuBtn").onclick = Sudoku
